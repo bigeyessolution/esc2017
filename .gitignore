@@ -7,6 +7,11 @@ build/
 # Log Files
 *.log
 
-platforms/
+platforms
 
-plugins/
+plugins
+
+hooks
+
+.DS_Store
+*/.DS_store
