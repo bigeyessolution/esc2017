@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--
+    This file is part of com.bigeyessolution.ConvergenceBRApp.
+
+    Foobar is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Foobar is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/convergencebr.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css">
+        <link rel="stylesheet" type="text/css" href="css/leaflet.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="js/preenche_agenda.js"></script>
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="js/leaflet.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <title>Energy Simulation Conference (ESC 2016)</title>
+    </head>
+    <body>
+        <header data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <h1>&nbsp;</h1>
+            <a href="#mpanel" class="btn-mpanel"><img src="img/icon/menu-25.png"/></a>
+        </header>
+
+        <div data-role="panel" data-display="overlay" data-theme="a" id="mpanel">
+            <ul class="mpanel">
+                <li class="li-sobre"><a href="#sobre"><img src="img/icon/sobre.png"><span>  Sobre</span></a></li>
+                <li class="li-keynote"><a href="#palestrantes"><img src="img/icon/keynote.png"><span>  Keynote</span></a></li>
+                <li class="li-agenda"><a href="#agenda10"><img src="img/icon/agenda.png"><span>  Agenda</span></a></li>
+                <li class="li-parceiro"><a href="#parceiros"><img src="img/icon/parceiro.png"><span>  Parceiro</span></a></li>
+                <li class="li-local"><a href="#mapa"><img src="img/icon/local.png"><span> Local do Evento</sapn></a></li>
+            </ul>
+        </div>
+
+        <!-- agenda -->
+        <section id="agenda10" data-role="page" data-title="Agenda">
+            <header>
+                <h1 class="header-agenda">Agenda</h1>
+            </header>
+
+            <div role="main" class="ui-content">
+                <div class="ui-be-collapsibleset" data-role="collapsibleset">
+                    <ul data-role="listview" class="ui-be-agenda"></ul>
+                </div>
+            </div>
+        </section>
+		<!-- Fim agenda -->
+
+        <!-- sobre -->
+        <section id="sobre" data-role="page" data-title="Sobre o evento">
+            <header>
+                <h1 class="header-sobre">Sobre o evento</h1>
+            </header>
+
+            <div role="main" class="ui-content">
+                <div class="ui-body ui-be-sobre">
+                    <p>
+                        O Energy Simulation Conference (ESC 2016) reunirá
+                        especialistas em energia e simulação do país para
+                        debater as principais novidades e desafios da indústria
+                        de Óleo &amp; Gás. O evento visa apresentar as
+                        metodologias e inovações que empresas e universidades
+                        estão desenvolvendo neste setor com o auxílio da
+                        simulação computacional. Nesta primeira edição, o
+                        ESC 2016 conta com a realização do CFD OIL, evento
+                        realizado há mais 10 anos com foco no setor de Óleo e
+                        Gás, como uma das sessões do evento. O ESC 2016 traz
+                        apresentação de trabalhos envolvendo outros tipos de
+                        análises, como estrutural, eletromagnética, multifísica
+                        e simulação de partículas.
+                    </p>
+
+                    <h4><a href="http://www.simulation-energy.com/home">
+                            Acesse o site do evento.
+                    </a></h4>
+
+                    <h1>Histórico</h1>
+                    <p>
+                        A ESSS e a ANSYS promovem o Energy Simulation Conference
+                        (ESC 2016) com o objetivo de difundir soluções,
+                        com base no uso de tecnologias de CAE (Computer-Aided
+                        Engineering), para problemas presentes na indústria de
+                        Óleo e Gás, bem como mostrar como as ferramentas de
+                        simulação CAE são utilizadas para o desenvolvimento,
+                        melhoria e redução de custos de projetos e processos.
+                        Nesta primeira edição, o ESC 2016 conta com a realização
+                        do CFD OIL, evento realizado há mais 10 anos com foco no
+                        setor de Óleo e Gás, como uma das sessões do evento.
+                        Ambos os eventos irão proporcionar aos usuários de
+                        softwares de simulação um ambiente de conhecimento e
+                        debate sobre a utilização das tecnologias de simulação
+                        na indústria de Óleo e Gás.
+                    </p>
+
+                    <h1>Retrospectiva</h1>
+                    <img src="img/esss.jpg">
+
+                    <div data-role="tabs">
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a href="#retro1">1995</br>2005</a></li>
+                                <li><a href="#retro2">2005</br>2010</a></li>
+                                <li><a href="#retro3">2010</br>2013</a></li>
+                                <li><a href="#retro4">2013</br>2016</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="retro1" class="ui-body ui-body-a">
+                            <p>
+                                Criação da ESSS a partir do SINMEC/UFSC. A ESSS
+                                torna-se parceira da ANSYS, Inc. na América do
+                                Sul e lançamento das soluções Kraken e Chimera.
+                                Recebimento do Prêmio Max Award, da Fenasoft, e
+                                do Prêmio FINEP de Inovação – Produto Regional.
+                            </p>
+                        </div>
+
+                        <div id="retro2" class="ui-body ui-body-a">
+                            <p>
+                                Abertura dos escritórios de São Paulo, Rio de
+                                Janeiro e Chile e criação do iESSS. Recebimento
+                                do prêmio FINEP de Inovação - Pequena Empresa.
+                                Evolução da identidade visual da ESSS com o
+                                redesenho da logomarca.
+                            </p>
+                        </div>
+
+                        <div id="retro3" class="ui-body ui-body-a">
+                            <p>
+                                Intensificação da expansão internacional com
+                                abertura dos escritórios na Argentina, Peru,
+                                Colômbia e Estados Unidos. Inauguração da sede
+                                própria em Florianópolis.
+                            </p>
+                        </div>
+
+                        <div id="retro4" class="ui-body ui-body-a">
+                            <p>
+                                Expansão das operações para Ibéria, México e
+                                América Central e inclusão do Rocky DEM no
+                                portfólio de produtos. Em 2015, a ESSS recebeu a
+                                certificação ANSYS Elite Channel Partner e, em
+                                2016, o Prêmio ANP de Inovação Tecnológica 2016.
+                            </p>
+                        </div>
+                    </div><!-- Fim tabs -->
+                </div>
+            </div>
+        </section>
+
+        <section id="palestrantes" data-role="page" data-title="Palestrantes">
+            <header>
+                <h1 class="header-keynote">Keynotes</h1>
+            </header>
+
+            <div role="main" class="ui-content">
+                <div class="ui-body">
+                    <img src="img/palestrantes/jansen.png">
+                    <h2>Jansen Martins Lopes</h2>
+                    <h4>
+                        Gerente Setorial de Engenharia Básica de Processos,
+                        PETROBRAS
+                    </h4>
+                    <h5><i>
+                        “Desafios em Projetos de Plataformas de Produção de
+                        Petróleo e Gás: Histórico e iniciativas futuras”
+                    </i></h5>
+                    <p>
+                        Jansen possui graduação em Engenharia Química pela
+                        Universidade Federal do Rio de Janeiro (UFRJ) e
+                        Pós-Graduação em Engenharia de Petróleo pela
+                        Universidade Gama Filho (UGF). Ingressou na Petrobras em
+                        2007 e atuou por três anos na área de Elevação e
+                        Escoamento em projetos da Bacia do Espírito Santo.
+                        Entre os anos de 2010 e 2014 trabalhou na área de
+                        operação da produção, tendo exercido as funções de
+                        Coordenador de Produção e Gerente de Plataforma a bordo
+                        do FPSO P-57 e Gerente de Operação das Plataformas
+                        Próprias do Polo Lula. Gerencia desde 2014 a área de
+                        Engenharia Básica de Processos de E&amp;P da PETROBRAS.
+        			</p>
+        		</div>
+        		<div class="ui-body">
+        			<img src="img/palestrantes/vedanth.png">
+        			<h2>Vedanth Srinivasan</h2>
+        			<h4>Technical Account Director Fluids Specialist, ANSYS, Inc.</h4>
+        			<h5><i>
+                        “Simulação e IoT para Indústria de Petróleo e Gás”
+                    </i></h5>
+                    <p>
+                        Dr. Srinivasan possui graduação em Engenharia Mecânica
+                        pela Universidade de Madras e doutorado em Engenharia
+                        Mecânica pela Universidade de Kentucky. Possui
+                        experiência com modelagem e simulação em Petróleo e Gás,
+                        técnicas numéricas e Fluidodinâmica Computacional (CFD).
+                        Atualmente é Diretor Técnico de Contas da ANSYS, Inc.
+        			</p>
+                </div>
+
+                <div class="ui-body">
+                    <img src="img/palestrantes/hugo.png">
+                    <h2>Hugo Almeida</h2>
+                    <h4>CAE Leader, Technip</h4>
+                    <h5><i>
+                        "Aplicação da Simulação Computacional na Engenharia de
+                        Equipamentos Subsea"
+                    </i></h5>
+                    <p>
+                        Almeida possui graduação em Engenharia Mecânica e
+                        Mestrado em Mecânica da Fratura e Materiais Compósitos
+                        pela Universidade Federal do Rio de Janeiro (UFRJ).
+                        Possui experiência em análise estrutural e de fadiga.
+                        Atualmente atua como Head de CAE (Computer-Aided
+                        Engineering) Team, onde desempenha atividades de R&amp;D
+                        e consolidação de equipamentos subsea e de
+                        desenvolvimento de softwares de apoio a projetos.
+                    </p>
+                </div>
+                <div class="ui-body">
+                    <img src="img/palestrantes/leonardo.png">
+                    <h2>Leonardo Paes Rangel</h2>
+                    <h4>Fuel and Energy Consultant, ESSS</h4>
+                    <h5><i>
+                        "Software Customizado para Aplicações Especiais em
+                        Petróleo e Gás"
+                    </i></h5>
+                    <p>
+                        Dr. Leonardo Rangel é Engenheiro Químico e Ph.D. em
+                        combustível e Engenharia de Energia pela Universidade
+                        de Leeds (Reino Unido). Desde 1999 ele atua no
+                        desenvolvimento de projetos de simulação de computador
+                        para a maioria das aplicações de engenharia para
+                        petróleo, gás, produtos químicos, energia, mobilidade e
+                        indústrias de materiais. Desde 2006 ele trabalha na ESSS
+                        como Gerente de Serviços, Projetos, Pesquisa e
+                        Desenvolvimento com foco na aplicação de software
+                        comercial e personalizado.
+        			</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="parceiros" data-role="page" data-title="Parceiros">
+            <header>
+                <h1 class="header-parceiro">Parceiro</h1>
+            </header>
+
+            <div role="main" class="ui-content">
+                <div class="ui-body ui-be-parceiro">
+                    <img src="img/parceiros/logo.png">
+                    <p>
+                        A ANSYS é a líder global de simulação em engenharia e
+                        oferece as mais completas ferramentas de CAE
+                        (Computer-Aided Engineering) do mercado.
+                        As tecnologias desenvolvidas pela empresa agregam aos
+                        diferentes setores da indústria alta qualidade, precisão
+                        e permitem o desenvolvimento de projetos e processos
+                        inovadores, bem como possibilitam manter os produtos por
+                        mais tempo em exposição no mercado (time to market). A
+                        ANSYS foi fundada em 1970 em Pittsburgh, nos Estados
+                        Unidos e, atualmente, conta com mais de 75 revendas e
+                        escritórios de desenvolvimento em todo o mundo.
+                        Para mais informações visite www.ansys.com.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mapa" data-role="page" data-title="Mapa">
+            <header>
+                <h1 class="header-local">Local do evento</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#mapa">Localização</a></li>
+                        <li><a href="#mapa2">Salas</a></li>
+                    </ul>
+                    <ul data-role="listview" class="ui-be-mapa">
+                        <li data-icon="false">
+                            <a href="geo:-22.926235,-43.1752222">
+                                <h1>Windsor Florida Hotel</h1>
+                                <span>
+                                    Rua Ferreira Viana, 81 - Flamengo – Rio de
+                                    Janeiro/RJ
+                                <span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div role="main" class="ui-content mapaView"></div>
+        </section>
+
+        <section id="mapa2" data-role="page" data-title="Mapa">
+            <header>
+                <h1 class="header-local">Local do evento</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#mapa">Localização</a></li>
+                        <li><a href="#mapa2">Salas</a></li>
+                    </ul>
+                </div>
+            </header>
+
+			<div role="main" class="ui-content">
+                <div  class="ui-body  mapa_sala">
+                    <img src="img/mapa.png">
+                </div>
+			</div>
+        </section>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

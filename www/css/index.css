@@ -1,0 +1,491 @@
+ /*
+  * This file is part of Foobar.
+  *
+  * Foobar is free software: you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+  * the Free Software Foundation, either version 3 of the License, or
+  * (at your option) any later version.
+  *
+  * Foobar is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU General Public License for more details.
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+	font-family: 'Conv_ubuntu';
+	src: url('fonts/ubuntu.eot');
+	src: local('☺'), url('fonts/ubuntu.woff') format('woff'), url('fonts/ubuntu.ttf') format('truetype'), url('fonts/ubuntu.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body, section, .ui-page, #mapa .ui-content, #mapaLocal { padding: 0!important; margin: 0 !important; height: 100%; font-family: 'Open Sans', sans-serif;}
+
+h1, h2, h3, h4, h5, h6, h7, a, p, span{
+	font-family: 'Conv_ubuntu',Sans-Serif !important;
+}
+
+.header-agenda{
+	text-align: center;
+	color: rgb(245,130,57);
+	background-color: #fff;
+	border-bottom: 1px solid rgb(245,130,57);
+	margin: 0 !important;
+	padding: 0.5rem 0;
+}
+
+.header-sobre{
+	text-align: center;
+	color: rgb(102,189,88);
+	background-color: #fff;
+	border-bottom: 1px solid rgb(102,189,88);
+	margin: 0 !important;
+	padding: 0.5rem 0;
+}
+
+.header-keynote{
+	text-align: center;
+	color: rgb(221,24,46);
+	background-color: #fff;
+	border-bottom: 1px solid rgb(221,24,46);
+	margin: 0 !important;
+	padding: 0.5rem 0;
+}
+
+.header-parceiro{
+	text-align: center;
+	color: rgb(6,138,199);
+	background-color: #fff;
+	border-bottom: 1px solid rgb(6,138,199);
+	margin: 0 !important;
+	padding: 0.5rem 0;
+}
+
+.header-local{
+	text-align: center;
+	color: rgb(27,34,85);
+	background-color: #fff;
+	border-bottom: 1px solid rgb(27,34,85);
+	margin: 0 !important;
+	padding: 0.5rem 0;
+}
+.ui-header {
+	height: 4rem;
+	
+	background: #fff;
+}
+
+.ui-header .ui-title {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: url('../img/logo.png') no-repeat center center;
+	background-size: contain;
+}
+
+.ui-page > header {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	top: 4rem;
+}
+
+.ui-page > header .ui-btn {
+	line-height: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+/*	font-size: 1.5vh; */
+}
+
+.ui-page > header .ui-navbar h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	text-align: center;
+	color: #666;
+}
+
+.ui-page > .ui-content {
+	margin-top:7rem;
+	margin-left: 0.2rem;
+	margina-right: 0.2rem;
+	margin-bottom: 0.01rem;
+}
+
+#agenda10 > .ui-content, 
+#agenda11 > .ui-content,
+#agenda12 > .ui-content {
+	margin-top: 0rem !important;
+	margin-left: 0 !important;
+}
+
+.ui-content .ui-be-agenda{
+	margin-top: 6rem !important;
+	
+}
+
+.ui-be-tabs-navbar {
+	/*position: fixed;*/
+	width: 100%;
+/*
+	top: 8vh;
+*/
+}
+
+.ui-listview li {
+}
+
+.ui-listview .ui-li-has-thumb .ui-btn {
+	padding-left: 2rem;
+}
+
+.ui-listview .ui-li-has-thumb .ui-btn img {
+	height: 7.5rem;
+	width: auto;
+
+}
+
+.ui-listview .ui-li-has-thumb h2 {
+}
+
+.ui-listview .ui-li-has-thumb p {
+}
+
+.ui-body {
+	text-align: center;
+	margin-bottom: 1rem;
+	border-bottom: solid 0.1rem #798d8e;
+	padding: 0.2rem !important;
+}
+
+.ui-body img {
+	width: 45%;
+	height: auto;
+}
+
+.ui-body p {
+	text-align: justify;
+	text-indent: 1rem;
+}
+
+/*Imagens dos botões para a NavBar*/
+
+.ui-footer .ui-navbar .ui-btn[href="#agenda10"] {
+	margin-top: -0.4rem;
+	height: 5.8rem !important;
+	
+	border: solid 1px #ddd;
+	
+	-webkit-border-radius: 1rem 1rem 0 0;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.ui-footer .ui-btn[href="#agenda10"] span {
+	height: 3.6rem;
+}
+
+.ui-footer {
+	height: 4.8rem;
+}
+
+.ui-footer .ui-btn{
+	height: 4.8rem;
+	padding: 0.1rem 0.5rem ;
+	font-size: 0.8rem;
+}
+
+.ui-footer .ui-btn span {
+	display: block;
+	height: 3rem;
+
+	margin-bottom: 0.002rem;
+	margin-top: 0.07rem;
+	
+	background-size: auto 70%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding: 0;
+}
+
+.ui-footer .ui-navbar .ui-btn-active {
+	background: #a3a3a3 !important;
+	color: #fff !important; 
+}
+
+/*Span e p da agenda*/
+
+.ui-navbar span{	
+	color: #3d9970;
+}
+
+.ui-be-navbar ul li a{
+	font-size: 0.5rem !important;
+	white-space:normal;
+}
+
+.ui-listview li h2{
+	color: #535a65;
+	white-space:normal;
+}
+
+.ui-listview li span{
+	color: #1c3d50;
+	font-size: 0.8rem;
+	font-style: italic;
+	white-space:normal;
+}
+
+.ui-listview li p{
+	color: #231f20;
+	font-size: 0.9rem;
+	margin: 0.1em 0px !important;
+	white-space:normal;
+}
+
+.ui-navbar li:last-child .ui-btn {
+    margin-right: 0px !important;
+}
+
+.ui-be-sobre p{
+	text-align: justify;
+	padding: 0.1rem;
+	color: #231f20;
+}
+
+.ui-be-parceiro p{
+	text-align: justify;
+	padding: 0.1rem;
+	color: #231f20;
+}
+
+#palestrantes p{
+	text-align: justify;
+	padding: 0.3rem;
+	color: #231f20;
+}
+
+.ui-be-sobre h1{
+	text-align: center;
+	color: #1c3d50;
+}
+
+#mapa header {
+	z-index: 10;
+}
+
+#mapaLocal {
+}
+
+.leaflet-pane {
+	z-index: 0 !important;
+}
+
+.mapa_sala{
+	text-align: center !important;
+	border-bottom: none !important;
+}
+
+.mapa_sala img{
+    width: 80% !important;
+    height: auto !important;
+    margin-top: 2rem !important;
+}
+
+.ui-be-mapa2 li h4{
+	text-align: center;
+}
+
+.onde_ficar{
+	margin-top: 9rem !important;
+}
+
+.ui-be-mapa3{
+	padding: 1rem !important;	
+}
+
+/*Novo index*/
+
+.ui-be-collapsibleset {
+	margin: 0!important;
+}
+
+.ui-be-collapsible {
+	margin: 0!important;
+	padding-left: 0.5rem !important;
+	padding-bottom: 0 !important;
+	padding-right: 0 !important;
+}
+
+.ui-collapsible-content {
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.ui-collapsible-content ul {
+	padding-left: 0;
+}
+
+.ui-collapsible-content li {
+	border-bottom: 1px solid #ddd;
+}
+
+.ui-collapsible-heading a {
+	background-color: transparent !important;
+}
+
+.ui-listview a {
+	border: none !important;
+	text-decoration: none !important;
+}
+
+.ui-listview li a.ui-btn,
+.ui-listview li h2 {
+	white-space: normal !important;
+}
+
+.ui-collapsible-content ul li {
+	list-style: none !important;
+}
+
+.ui-be-agenda li{
+	padding-left: 1rem !important;
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem;
+}
+
+.ui-collapsible-heading a{
+	color: #231f20 !important;
+}
+
+.ui-be-plenary-session {
+	background-color: rgb(255, 228, 48) !important;
+	border-left: rgb(255, 228, 48) !important;
+}
+
+.ui-be-estrutural {
+	background-color: rgb(165, 255, 252) !important;
+	border-left:  rgb(165, 255, 252) !important;
+}
+
+.ui-be-fluidodinamica-1 {
+	background-color: rgb(213, 255, 139) !important;
+	border-left:  rgb(213, 255, 139) !important;
+}
+
+.ui-be-fluidodinamica-2 {
+	background-color: rgb(233, 255, 193) !important;
+	border-left: rgb(233, 255, 193) !important;
+}
+
+#palestrantes .ui-content a {
+	text-decoration: none;
+}
+
+.ui-be-sobre h4 a{
+	text-decoration: none !important;
+}
+.mpanel{
+	margin-top: 5rem;
+	padding: 1rem;
+}
+
+.mpanel a{
+    text-decoration-line: none !important;
+}
+
+.btn-mpanel{
+	border-bottom: none !important;
+	color: none !important;
+	background-color: none !important;
+}
+
+ul {
+
+	list-style-type: none !important;
+
+}
+
+a{
+	text-decoration-line: none !important;
+}
+
+.li-sobre{
+	background-color: #fff;
+	border-bottom: 1px solid rgb(102,189,88);
+	margin-bottom: 1rem;
+}
+
+.li-sobre a span{
+	color: rgb(102,189,88) !important;
+	margin-left: 1rem;
+}
+
+
+.li-keynote{
+	background-color: #fff;
+	border-bottom: 1px solid rgb(221,24,46);
+	margin-bottom: 1rem;
+}
+
+.li-keynote a span{
+	color: rgb(221,24,46) !important;
+	margin-left: 1rem;
+}
+
+.li-agenda{
+	background-color: #fff;
+	border-bottom: 1px solid rgb(245,130,57);
+	margin-bottom: 1rem;
+}
+
+.li-agenda a span{
+	color: rgb(245,130,57) !important;
+	margin-left: 1rem;
+}
+
+.li-parceiro{
+	background-color: #fff;
+	border-bottom: 1px solid rgb(6,138,199);
+	margin-bottom: 1rem;
+}
+
+.li-parceiro a span{
+	color: rgb(6,138,199) !important;
+	margin-left: 1rem;
+}
+
+.li-local{
+	background-color: #fff;
+	border-bottom: 1px solid rgb(27,34,85);
+	margin-bottom: 1rem;
+}
+
+.li-local a span{
+	color: rgb(27,34,85) !important;
+	margin-left: 1rem;
+}
+
+.img-mpanel{
+	width: 80%;
+	height: auto;
+}
+
+.div-footer-mpanel{
+	bottom: 1rem;
+	text-align: center;
+	margin-top: 4rem;
+}
+

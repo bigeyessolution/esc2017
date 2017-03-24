@@ -1,0 +1,470 @@
+var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
+{
+	"version": 25,
+	"agenda10" : [
+		{"salahora": "8:30", "titulo": "Credenciamento", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-plenary-session",
+			"descricao": "Plenária",
+			"salahora": "9:00",
+			"itens": [
+				{"salahora": "9:00", "titulo": "Abertura", "info": "Marcus Reis, Vice-Presidente, ESSS"},
+				{"salahora": "9:10", "titulo": "Desafios em Projetos de Plataformas de Produção de Petróleo e Gás: Histórico e iniciativas futuras", "info": "Jansen Martins Lopes"},
+				{"salahora": "9:40", "titulo": "Simulação e IoT para Indústria de Petróleo e Gás", "info": "Vedanth Srinivasan"}
+			]
+		},
+		{"salahora": "10:10", "titulo": "Coffee-Break", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-plenary-session",
+			"descricao": "Plenária",
+			"salahora": "10:40",
+			"itens": [
+				{"salahora": "10:40", "titulo": "Aplicação da Simulação Computacional na Engenharia de Equipamentos Subsea", "info": "Hugo Almeida"},
+				{"salahora": "11:10", "titulo": "Software customizado para aplicações especiais em Petróleo e Gás", "info": "Leonardo Paes Rangel"},
+				{"salahora": "11:40", "titulo": "CFDOIL - Trajetória e Homenagens", "info": "Clovis R. Maliska"}
+			]
+		},
+		{"salahora": "12:30", "titulo": "Almoço", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-fluidodinamica-1",
+			"descricao": "Fluidodinâmica I",
+			"salahora": "13:00",
+			"itens": [
+				{"salahora": "13:00", "titulo": "Simulação de interação fluido-estrutural-acústica do sistema de flare de alta pressão da P58", "info": "Ana Paula Faria e Raphael Bacchi, ESSS e Ricardo Serfaty, PETROBRAS"},
+				{"salahora": "13:30", "titulo": "Avaliação da injeção de spray em sistemas de topo de torres de destilação para controlar corrosão", "info": "Guilherme Pimentel de Maria da Silva e Gustavo José Simões, PETROBRAS"},
+				{"salahora": "14:00", "titulo": "Utilização de fluidodinâmica computacional (CFD) para estudos de tochas (Flare)", "info": "Daniel Evandro Ludwig, Marcos Antonio Pinto do Amaral, Mauro Cresta de Barros Dolinsky e Renata Dias Ambrósio, PETROBRAS"},
+				{"salahora": "14:30", "titulo": "Utilização de CFD em engenharia oceânica", "info": "Daniel Fonseca de Carvalho e Silva, PETROBRAS"},
+				{"salahora": "15:00", "titulo": "Avaliação fluidodinâmica do conjunto flare/soprador de ar de uma unidade de processo", "info": "João Victor Barbosa Alves e Paulo Roberto Pagot, PETROBRAS/Radix"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-fluidodinamica-2",
+			"descricao": "Fluidodinâmica II",
+			"salahora": "13:00",
+			"itens": [
+				{"salahora": "13:00", "titulo": "Estudo em CFD do desempenho de ejetores", "info": "Michele Pedroso, PETROBRAS"},
+				{"salahora": "13:30", "titulo": "Estudo de CFD de sistemas reativos compressíveis", "info": "Eduardo Oliveira, PETROBRAS"},
+				{"salahora": "14:00", "titulo": "Avaliação da deposição de partículas em tubulações de uma instalação petroquímica usando CFD", "info": "Carlos Caruso, BRASKEM"},
+				{"salahora": "14:30", "titulo": "Simulação fluidodinâmica da injeção de diesel para a preservação de uma flowline preenchida com óleo em águas ultraprofundas", "info": "Gabriel Goes, Queiroz Galvão"},
+			    {"salahora": "15:00", "titulo": "Aplicação de fluidodinâmica computacional e sistemas de reatores na avaliação de equipamentos de processo", "info": "Ana Paula Faria, ESSS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-estrutural",
+			"descricao": "Estrutural e Multifísica",
+			"salahora": "13:00",
+			"itens": [
+				{"salahora": "13:00", "titulo": "Internet das coisas industrial: Explorando o potencial dos produtos e serviços conectados na indústria de O&G", "info": "Juliano Mologni, ESSS"},
+				{"salahora": "13:30", "titulo": "Simulação acústica de silenciadores de um compressor de parafusos", "info": "Leonardo Junqueira Mattana Saturnino e Mateus Louis Vieira, PETROBRAS"},
+				{"salahora": "14:00", "titulo": "Determinação da mínima perna de solda requerida em conexões de pequeno diâmetro com niples tipo meia luva", "info": "Hervandil Morosini Sant'Anna, PETROBRAS"},
+				{"salahora": "14:30", "titulo": "Inovando no Projeto de Engenharia de Torres com Simulação Multifísica", "info": "Juliano Mologni e Mauricio Pacheco, ESSS e Batista Luz, Leo Snovareski e Ricardo Damian, Jet Towers"},
+				{"salahora": "15:00", "titulo": "Absorção de energia de impacto em chapas de aço", "info": "Mario Castro, Technip"}
+			]
+		},
+		{"salahora": "15:30", "titulo": "Coffee-Break", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-fluidodinamica-1",
+			"descricao": "Fluidodinâmica I",
+			"salahora": "16:00",
+			"itens": [
+				{"salahora": "16:00", "titulo": "Desafios tecnológicos e a contribuição de técnicas de simulação fluidodinâmica em projetos de construção de poços", "info": "Thiago Judson, PETROBRAS"},
+				{"salahora": "16:30", "titulo": "Análise do escoamento em trocadores WHRU através de fluidodinâmica computacional", "info": "Karolline Ropelato e Raphael Bacchi, ESSS e Francisco Miller e Victor souza, PETROBRAS"},
+				{"salahora": "17:00", "titulo": "Simulação de CFD de ciclones de entrada do separador de produção de uma plataforma", "info": "Fabricio Soares da Silva e João Victor Barbosa Alves, PETROBRAS/Radix"},
+				{"salahora": "17:30", "titulo": "Análise de combustíveis e sistemas reativos com ANSYS Reaction Workbench e ANSYS Chemkin Pro", "info": "Raphael Bacchi, ESSS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-fluidodinamica-2",
+			"descricao": "Fluidodinâmica II",
+			"salahora": "16:00",
+			"itens": [
+				{"salahora": "16:00", "titulo": "Avaliação de falha por corrosão-erosão em linha de hidrocarboneto", "info": "Diogo Dantas Ribeiro, Fernando César Lopes de Oliveira e Franciele Meira Ferreira, PETROBRAS"},
+				{"salahora": "16:30", "titulo": "CFD como ferramenta para alocação de detectores de gás: cuidados, desafios e incertezas associadas", "info": "Bruno Barbabela, Bureau Veritas"},
+				{"salahora": "17:00", "titulo": "Metodologia baseada em escoamento para análise da operação de bombeio mecânico", "info": "Daniel da Cunha Ribeiro, UFES"},
+				{"salahora": "17:30", "titulo": "Simulação fluidodinâmica de um sistema de flare", "info": "Karolline Ropelato e Rodrigo Peralta Muniz Moreira, ESSS e Frederico Catalao de Carvalho, PETROBRAS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-estrutural",
+			"descricao": "Estrutural e Multifísica",
+			"salahora": "16:00",
+			"itens": [
+				{"salahora": "16:00", "titulo": "Análise do comportamento de estacas torpedo em solos coesivos", "info": "José Renato, UFRJ"},
+				{"salahora": "16:30", "titulo": "Avaliação numérica da passagem de PIG raspador em trechos de circuito teste da Petrobras", "info": "Maurício Rangel Pacheco e Raphael David Aquilino Bacchi, ESSS e Eduardo Teixeira e André Maricato, PETROBRAS"},
+				{"salahora": "17:00", "titulo": "Exemplos de FEA para equipamentos submarinos: Comparação da abordagem de tensão local via DNVGL RP C203 / ANSYS ACT para a avaliação das tensões conforme API 17L", "info": "Hugo Almeida, Technip"},
+				{"salahora": "17:30", "titulo": "Avaliação de VIV aplicado a equipamentos submarinos com fluidodinâmica computacional", "info": "Bianca Teixeira, ESSS"}
+			]
+		},
+		{"salahora": "17:30", "titulo": "Encerramento", "info": "", "divisao": true}
+	],
+	"agenda11" : [
+		{"salahora": "8:00", "titulo": "Registration Open", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-engineering-workshops",
+			"descricao": "Engineering Workshops",
+			"salahora": "8:30",
+			"itens": [
+				{"salahora": "8:30 - Room Lorangerie I", "titulo": "ASME Section VIII - Division 2", "info": "Jairo Mola, Unitécnica"},
+				{"salahora": "8:30 - Room Lorangerie II", "titulo": "Model Verification for Finite Element Analysis", "info": "Giuseppe Mirlisenna, ESSS"},
+				{"salahora": "8:30 - Room Malmaison", "titulo": "Reduced Hydraulic Models Tests", "info": "César Felipe Nardy, Bardella"}
+			]
+		},
+		{"salahora": "9:50", "titulo": "Refreshments in exhibition area", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-plenary-session",
+			"descricao": "Plenary session",
+			"salahora": "10:20",
+			"itens": [
+				{"salahora": "10:20 - Versallis", "titulo": "Opening", "info": "Clóvis Maliska Jr., ESSS", "link": "#palestrantes"},
+				{"salahora": "10:30 - Versallis", "titulo": "Simulation for Breakthrough Innovation: Trends, Best Practices & ANSYS Simulation Platform", "info": "Ravi Kumar, ANSYS, Inc.", "link": "#palestrantes"},
+				{"salahora": "11:10 - Versallis", "titulo": "SIRIUS: Brazil at the vanguard of Engineering of Accelerators", "info": "Lucas Sanfelici, LNLS", "link": "#palestrantes"},
+				{"salahora": "11:50 - Versallis", "titulo": "Design Validation & Decision Making", "info": "Luiz Carlos de Castro Santos, Embraer", "link": "#palestrantes"}
+			]
+		},
+		{"salahora": "12:30", "titulo": "Lunch", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-software-update",
+			"descricao": "Software Update",
+			"salahora": "14:00",
+			"itens": [
+				{"salahora": "14:00 - Room Lorangerie I", "titulo": "ANSYS Structural Mechanics", "info": ""},
+				{"salahora": "14:00 - Room Lorangerie II", "titulo": "ANSYS Fluid Dynamics", "info": ""},
+				{"salahora": "14:00 - Room Malmaison", "titulo": "modeFRONTIER", "info": ""},
+				{"salahora": "14:00 - Room Chambord", "titulo": "Eletromagnetics", "info": ""}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-workshop-application",
+			"descricao": "Free Workshops",
+			"salahora": "14:30",
+			"itens": [
+				{"salahora": "14:30 - Room Lorangerie I", "titulo": "Workflow and Usability Enhancements in Workbench Mechanical 17.0", "info": "Pedro Cheroto, ESSS"},
+				{"salahora": "14:30 - Room Lorangerie I", "titulo": "Substructuring Analysis in Workbench Mechanical 17.0", "info": "Fabiano Diesel, ESSS"},
+				{"salahora": "14:30 - Room Lorangerie II", "titulo": "Working with new features in ANSYS CFD 17.0", "info": "Bruno Contessi, ESSS"},
+				{"salahora": "14:30 - Room Malmaison", "titulo": "ANSYS Enterprise Cloud", "info": "Vinicius Strugata, ESSS"},
+				{"salahora": "14:30 - Room Chambord", "titulo": "ANSYS Savant Introduction", "info": "Juliano Mologni, ESSS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Structural Mechanics",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Lorangerie I", "titulo": "Numerical Model Applied on Fatigue Life Predictions of In-Service Subsea Free Spanning Pipelines", "info": "Almir Sobral, PETROBRAS"},
+				{"salahora": "15:40 - Room Lorangerie I", "titulo": "Comparison of Different Local Stress Approaches for Fatigue Assessment of Subsea Equipment Based on Finite Element Analysis", "info": "Hugo Bottino, Technip"},
+				{"salahora": "16:00 - Room Lorangerie I", "titulo": "Temperature Profile Evaluation on a Flexible Pipe within a Bend Stiffener", "info": "Marcelo Galardo, GE Wellstream e Pedro Cheroto, ESSS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Lorangerie II", "titulo": "Computacional Fluid Dynamics and Static Analysis Oriented to Biopriting of Human Tissues and Organs", "info": "Fábio Albuquerque, CTI Renato Arche"},
+				{"salahora": "15:40 - Room Lorangerie II", "titulo": "3D Design and Fluid-Structure Interactions Analyses of a Heart Valve Model Compared with a Polyurethane-Made Heart Valve", "info": "Janaína Dernowsek, CTI Renato Arche"},
+				{"salahora": "16:00 - Room Lorangerie II", "titulo": "CFD analyses of a cement kiln", "info": "Renata Favalli, Dynamis Mecânica Aplicada Ltda."}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Structural Mechanics",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Malmaison", "titulo": "Structural Reinforcement of Gas Cleaning System for Blast Furnace ", "info": "Bruno Martins, ISQ Brasil"},
+				{"salahora": "15:40 - Room Malmaison", "titulo": "Thermo-Structural Analysis of a Steel Shop Converter Using Thermography Data", "info": "Luiz Otavio Rocha, USIMINAS"},
+				{"salahora": "16:00 - Room Malmaison", "titulo": "Intuitive, Parametric and Topology Optimization Applied on Rollover Protective Structures of Agriculture Tractors", "info": "Igor Saveljevas, VirtualCAE"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Electromagnetic",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Chambord", "titulo": "Multiphysics (Electromagnetics and Thermal) Simulation of a Microwave Oven", "info": "Juliano Mologni, ESSS"},
+				{"salahora": "15:40 - Room Chambord", "titulo": "Slotted Waveguide Antennas for Radar Applications ", "info": "Igor Feliciano, INATEL"},
+				{"salahora": "16:00 - Room Chambord", "titulo": "Optically-controlled Reconfigurable Antennas and RF Devices for mm-wave Applications", "info": "Andreia Aparecida de Castro, UNIFEI"}
+			]
+		},
+		{"salahora": "16:20", "titulo": "Refreshments in exhibition area", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Structural Mechanics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Lorangerie I", "titulo": "Simulations performed at the Brazilian Synchrotron Light Source", "info": "Allan Gilmour Anderson Jr., LNLS"},
+				{"salahora": "17:10 - Room Lorangerie I", "titulo": "FEM Applications in Health Industry Equipment Evaluation", "info": "Bernardo Abrahão Campos Salles, GE Healthcare"},
+				{"salahora": "17:30 - Room Lorangerie I", "titulo": "Structure Analisys of a Shiploader - Upper and Lower Structures", "info": "Cristian Zarichta, TMSA"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Lorangerie II", "titulo": "CFD Analysis on LNG Spheres Deluge System According to API Standard", "info": "Carlos Eduardo Reuther, PETROBRAS"},
+				{"salahora": "17:10 - Room Lorangerie II", "titulo": "Simulation CFD of a riser-FCC using the approach continuous lumping on the cracking reactions", "info": "José Luis Gomez Vergel, UNICAMP"},
+				{"salahora": "17:30 - Room Lorangerie II", "titulo": "Multiphase CFD Analysis of Submerged Air Blowing into a Copper Converter", "info": "Alexandre Dolabella, Magnesita"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Malmaison", "titulo": "CFX in the Pump Improvements and in Business Opportunities", "info": "Ismael Nicholas, Higra Industrial"},
+				{"salahora": "17:10 - Room Malmaison", "titulo": "Geometry Evaluation of PIG Iron Channel Using Computer Simulation", "info": "Leonardo Camilo dos Reis, Usiminas"},
+				{"salahora": "17:30 - Room Malmaison", "titulo": "Analysis of Cavity Modes in a Compressor Suction Muffler", "info": "Vitor Ferreira de Almeida, Tecumseh do Brasil"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Electromagnetic",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Chambord", "titulo": "Interoperability Analysis Between Different Radiant Systems Installed in the Same Metal Structure", "info": "Bruno Rodrigues Ferraz, SAVIS"},
+				{"salahora": "17:10 - Room Chambord", "titulo": "Design of X-Band Band-Pass Filter of Three Resonant Cavities based on SIW Technology", "info": "Ricardo Caranicola, EPUSP"},
+				{"salahora": "17:30 - Room Chambord", "titulo": "Engineering the 'Internet of Things' Using Simulation", "info": "Juliano Mologni, ESSS"}
+			]
+		},
+		{"salahora": "17:50", "titulo": "Technical Discussion", "info": "", "divisao": true},
+		
+		{"class": "ui-be-cocktail", "salahora": "18:10", "titulo": "Cocktail - atração musical", "info": "", "divisao": true}
+	],
+	"agenda12" : [
+		{"salahora": "8:00", "titulo": "Registration Open", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-engineering-workshops",
+			"descricao": "Engineering Workshops",
+			"salahora": "8:30",
+			"itens": [
+				{"salahora": "8:30 - Room Lorangerie I", "titulo": "Considerations about Mechanics and Materials Science Fundamentals that Support Integrity Evaluations of Cracked Components Due to Fatigue and Fracture", "info": "Prof. Gustavo Donato, FEI"},
+				{"salahora": "8:30 - Room Lorangerie II", "titulo": "Tips and Tricks for CFD Modeling ", "info": "Carlos Fontes, ESSS"},
+				{"salahora": "8:30 - Room Malmaison", "titulo": "Design and Analysis of Computer Experiments", "info": "Guilherme Jenovêncio, ESSS"}
+			]
+		},
+		{"salahora": "9:50", "titulo": "Refreshments in exhibition area", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-plenary-session",
+			"descricao": "Plenary session",
+			"salahora": "10:20",
+			"itens": [
+				{"salahora": "10:20 - Versallis", "titulo": "Opening", "info": "Clóvis Maliska Jr., ESSS"},
+				{"salahora": "10:30 - Versallis", "titulo": "CAE at Embraco: a Journey of 30 Years", "info": "Marcos Giovani de Bortoli, EMBRACO"},
+				{"salahora": "11:10 - Versallis", "titulo": "Horizons for Numerical Simulation", "info": "Cassiano Antunes Cezario, WEG"},
+				{"salahora": "11:50 - Versallis", "titulo": "Panel Discussion: Framework for Simulation", "info": ""}
+			]
+		},
+		{"salahora": "12:30", "titulo": "Lunch", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-software-update",
+			"descricao": "Software Update",
+			"salahora": "14:00",
+			"itens": [
+				{"salahora": "14:00 - Room Lorangerie I", "titulo": "Geometry", "info": ""},
+				{"salahora": "14:00 - Room Lorangerie II", "titulo": "ANSYS AIM", "info": ""},
+				{"salahora": "14:00 - Room Malmaison", "titulo": "ROCKY", "info": ""},
+				{"salahora": "14:00 - Room Malmaison", "titulo": "Rocky & SpaceClaim: An Efficient Design Tool For Bulk Solids Handling Processes.", "info": "Leon White, ESSS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-workshop-application",
+			"descricao": "Free Workshops",
+			"salahora": "14:30",
+			"itens": [
+				{"salahora": "14:30 - Room Lorangerie I", "titulo": "ANSYS SpaceClaim Direct Modele", "info": "Rafael Vetturazzi, ESSS"},
+				{"salahora": "14:30 - Room Lorangerie II", "titulo": "ANSYS AIM: Simulation for Every Engineer", "info": "Luiz Amaral, ESSS"},
+				{"salahora": "14:30 - Room Malmaison", "titulo": "ROCKY and ANSYS CFD Coupling", "info": "Lucilla Almeida, ESSS"},
+				{"salahora": "14:30 - Room Chambord", "titulo": "CFD: CHEMKIN overview and hands on", "info": "Ana Paula Faria, ESSS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Structural Mechanics",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Lorangerie I", "titulo": "Stress Analysis of the Support Structure of a Reactor Bed for Allowable Head Loss Calculation of the Process Gas Stream Using Elastic and Limit Load Method", "info": "Flavio Pereira, Braskem"},
+				{"salahora": "15:40 - Room Lorangerie I", "titulo": "Evaluation of Critical Buckling Load Value Through Different Analyzes Applied to Aluminum Cans", "info": "Rodrigo Villaca, UTFPR"},
+				{"salahora": "16:00 - Room Lorangerie I", "titulo": "FEM in Standard External Pressure Equipment", "info": "Ricardo Vendrame, Welding"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Lorangerie II", "titulo": "Analysis of Turbulence Models Applied to CFD Drag Simulations of a Small Hatchback Vehicle", "info": "Filipe Fabian, GM do Brasil"},
+				{"salahora": "15:40 - Room Lorangerie II", "titulo": "Best Practices for Simulation of Vortex Induced Motions (VIM)", "info": "Bianca Almeida, ESSS"},
+				{"salahora": "16:00 - Room Lorangerie II", "titulo": "Influence of Wheel Airflow Induction on Vehicle Total Drag Coefficient", "info": "Flavio Koiti Maruyama, GM do Brasil"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "DEM / Customization",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Malmaison", "titulo": "Use of Rocky DEM to Analyze Particulate Behavior Inside an Asphalt Plant Equipment", "info": "Emerson Elias Dewes, Bomag e Lucilla Coelho, ESSS"},
+				{"salahora": "15:40 - Room Malmaison", "titulo": "ANSYS Workbench Customization Applied to Tundish CFD Analysis", "info": "Alexandre Dolabella, Magnesita"},
+				{"salahora": "16:00 - Room Malmaison", "titulo": "Using ANSYS ACT for Running a Topology Optimization Analysis and Importing Residual Stress from Casting Simulation", "info": "Valmir Fleischman, VirtualCAE"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "15:20",
+			"itens": [
+				{"salahora": "15:20 - Room Chambord", "titulo": "CFD Simulation of Green Water Events on FPSOs exposed to Beam and Quartering Seas", "info": "Daniel Fonseca de Carvalho, PETROBRAS"},
+				{"salahora": "15:40 - Room Chambord", "titulo": "Water Meter Design and the Computational Fluid Dynamics", "info": "Bruno Brasselotti, Itron Brazil"},
+				{"salahora": "16:00 - Room Chambord", "titulo": "Multiphase Fuel Filling Simulation Methodology to Evaluate Different Filler Neck Designs", "info": "Leonardo José Volpe, GM do Brasil"}
+			]
+		},
+		{"salahora": "16:20", "titulo": "Refreshments in exhibition area", "info": "", "divisao": true},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Structural Mechanics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Lorangerie I", "titulo": "Use of Structural Analysis in Radiated Noise: a Study of Case in an Hermetic Compressor", "info": "Vitor Ferreira, Tecumseh do Brasil"},
+				{"salahora": "17:10 - Room Lorangerie I", "titulo": "Powertrain Air Intake System Acoustic Optimization Through Numerical Simulation", "info": "Diego Willian da Silva, Vibroacustica"},
+				{"salahora": "17:30 - Room Lorangerie I", "titulo": "Topology Optimization using ANSYS and Virtual Pyxis at ZF do Brasil", "info": "Janaina Rodrigues, ZF do Brasil"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Lorangerie II", "titulo": "Fluid Dynamics Simulation of Diesel Injection for the Preservation of a Flowline in Ultra-Deepwaters", "info": "Gabriel Guimarães, Queiroz Galvão E&P"},
+				{"salahora": "17:10 - Room Lorangerie II", "titulo": "Numerical Evaluation of Centrifugal Pumps in hermetic compressors", "info": "Luigi Carvalho Greco, EMBRACO"},
+				{"salahora": "17:30 - Room Lorangerie II", "titulo": "Front Brake Design for Air Drag and Rotor Temperature Reduction", "info": "Julio Cesar Lelis, GMB"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Structural Mechanics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Malmaison", "titulo": "Reducing GD&T using FEA", "info": "Mattias da Silva Castro, EMBRACO"},
+				{"salahora": "17:10 - Room Malmaison", "titulo": "Cost Reduction Through the use of Simulation", "info": "Luis Paulo de Oliveira, Electrolux"},
+				{"salahora": "17:30 - Room Malmaison", "titulo": "Frequency Domain Approach - Fatigue Life", "info": "José Guilherme, ENSUS"}
+			]
+		},
+		{
+			"collapsible": true,
+			"class": "ui-be-technical-session",
+			"descricao": "Fluid Dynamics",
+			"salahora": "16:50",
+			"itens": [
+				{"salahora": "16:50 - Room Chambord", "titulo": "Fluid Dynamic Study of the Rich Oil Distribution Pan in Delayed Coking Fractionators", "info": "André Gonçalves Oliveira, PETROBRAS"},
+				{"salahora": "17:10 - Room Chambord", "titulo": "Reactors Optimization with Efficient Mixing", "info": "Alexandre Sampaio de Lima Malagodi, SEMCO Equipamentos"},
+				{"salahora": "17:30 - Room Chambord", "titulo": "Evaluation of the Accuracy of RANS Models on the Prediction of Reactive Flows on a DLE Combustor", "info": "Diogo Dantas, PETROBRAS"}
+			]
+		},
+	
+		{"class": "ui-be-award", "salahora": "17:50", "titulo": "Convergence Best Paper Award / Academic Award", "info": "", "divisao": true, "link": "#sobre2"}
+	]
+}
+;
+
+function setAgenda () {
+	if (localStorage.agenda) {
+		agenda = JSON.parse (localStorage.agenda);
+	} else {
+		localStorage.agenda = JSON.stringify(agenda);
+	}
+}
+
+function populateAgenda(toPage) {
+	$('#' + toPage + ' .ui-be-agenda').empty();
+	$('#' + toPage + ' .ui-be-agenda').listview("refresh");
+
+	showLoading();
+	
+	var lista = agenda[toPage];
+	var saida = '';
+	var linhaID = 0;
+
+	function populateSub (key, sub) {
+		$('<li data-icon="false"><a '+
+		( sub.link ? 'href="' + sub.link + '"' : '' ) +
+		'><h2>' + sub.titulo + '</h2>' +
+		'<p>' + sub.info + '</p>' +
+		'<span>' + sub.salahora + '</span>' +
+		'</a></li>').appendTo('#' + toPage + ' #item-agenda-' + linhaID);
+	}
+
+	function populate (key, linha) {
+		if (linha.collapsible)  {
+			linhaID ++;
+
+			$('<li class="' + linha.class + ' ui-be-collapsible" data-role="collapsible" data-iconpos="false" data-inset="false">' +
+			'<h2>' + linha.descricao + '</h2>' +
+			'<ul id="item-agenda-' + linhaID + '" data-role="listview">')
+			.appendTo('#' + toPage + ' .ui-be-agenda');
+
+			$.each(linha.itens, populateSub);
+
+		} else {
+			$('<li class="' + linha.class + '" data-icon="false"' + (linha.divisao? ' data-role="list-divider"' : '') + '>'+
+			'<a ' + ( linha.link ? 'href="' + linha.link + '"' : '' ) + '>' +
+			'<h2>' + linha.titulo + '</h2>' +
+			'<p>' + linha.info + '</p>' + 
+			'<span>' + linha.salahora + '</span>' +
+			'</a></li>')
+			.appendTo('#' + toPage + ' .ui-be-agenda');
+		}
+	}
+				
+	$.each(lista, populate);
+		
+	hideLoading();
+
+	$('#' + toPage + ' .ui-be-agenda').listview("refresh");
+
+	$('#' + toPage + ' .ui-be-collapsibleset').collapsibleset("refresh");
+}
+
+function getAgenda (toPage) {
+	function done () {
+		populateAgenda(toPage);
+	}	
+
+	var urlAgenda = 'http://static.bigeyessolution.com/json/agenda-convergencebr-2016.json';
+
+	$.getJSON(urlAgenda, function (data) {
+		if (data.version <= agenda.version) return;
+
+		agenda = data;
+		localStorage.agenda = JSON.stringify(data);
+	});
+}
