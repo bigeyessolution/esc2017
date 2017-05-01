@@ -367,27 +367,52 @@ h1, h2, h3, h4, h5, h6, h7, a, p, span{
 }
 
 .ui-collapsible-heading a{
-	color: #231f20 !important;
+	/*color: #231f20 !important;*/
+}
+
+.ui-be-workshop-session{
+	background-color: rgb(64, 207, 235) !important;
+	border-left: rgb(64, 207, 235) !important;
 }
 
 .ui-be-plenary-session {
-	background-color: rgb(255, 228, 48) !important;
-	border-left: rgb(255, 228, 48) !important;
+	background-color: rgb(196, 92, 250) !important;
+	border-left: rgb(196, 92, 250) !important;
 }
 
-.ui-be-estrutural {
-	background-color: rgb(165, 255, 252) !important;
-	border-left:  rgb(165, 255, 252) !important;
+.ui-be-pratic-session {
+	background-color: rgb(249, 123, 60) !important;
+	border-left:  rgb(249, 123, 60) !important;
 }
 
-.ui-be-fluidodinamica-1 {
-	background-color: rgb(213, 255, 139) !important;
-	border-left:  rgb(213, 255, 139) !important;
+.ui-be-technical-session {
+	background-color: rgb(0, 51, 102) !important;
+	border-left:  rgb(0, 51, 102) !important;
 }
 
-.ui-be-fluidodinamica-2 {
-	background-color: rgb(233, 255, 193) !important;
-	border-left: rgb(233, 255, 193) !important;
+.ui-be-technical-discussion {
+	background-color: rgb(21, 255, 153) !important;
+	border-left:  rgb(21, 255, 153) !important;
+}
+
+.ui-be-pratic-session h2 a {
+	color: #fff !important;
+}
+
+.ui-be-workshop-session h2 a {
+	color: #fff !important;
+}
+
+.ui-be-plenary-session  h2 a {
+	color: #fff !important;
+}
+
+.ui-be-technical-session h2 a {
+	color: #fff !important;
+}
+
+.ui-be-technical-discussion h2 a {
+	color: #fff !important;
 }
 
 #palestrantes .ui-content a {
