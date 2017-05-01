@@ -6,12 +6,13 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
 		{
 			"collapsible": true,
 			"class": "ui-be-plenary-session",
-			"descricao": "Plenária",
+			"descricao": "Workshop de Engenharia",
 			"salahora": "9:00",
 			"itens": [
-				{"salahora": "9:00", "titulo": "Abertura", "info": "Marcus Reis, Vice-Presidente, ESSS"},
-				{"salahora": "9:10", "titulo": "Desafios em Projetos de Plataformas de Produção de Petróleo e Gás: Histórico e iniciativas futuras", "info": "Jansen Martins Lopes"},
-				{"salahora": "9:40", "titulo": "Simulação e IoT para Indústria de Petróleo e Gás", "info": "Vedanth Srinivasan"}
+				{"salahora": "Lorangerie I - 8:30", "titulo": "Composite Design", "info": "Prof. Airton Nabarrete - ITA e Eduardo Araújo - ESSS"},
+				{"salahora": "Lorangerie II - 8:30", "titulo": "Risk analysis: The effect of small scale geometry in the modelling of accidental gas dispersion using CFD", "info": "Prof. Savio Vianna - Unicamp"},
+				{"salahora": "Malmaison - 8:30", "titulo": "Industry 4.0", "info": "Leonardo Rangel e Juliano Mologni - ESSS"},
+				{"salahora": "Chambord - 8:30", "titulo": "Topology Optimization & Additive Manufacturing", "info": "Luiz Lima - ESSS"}
 			]
 		},
 		{"salahora": "10:10", "titulo": "Coffee-Break", "info": "", "divisao": true},
