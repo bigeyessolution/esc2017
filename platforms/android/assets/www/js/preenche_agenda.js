@@ -235,7 +235,7 @@ function getAgenda(toPage) {
         populateAgenda(toPage);
     }
 
-    var urlAgenda = 'http://static.bigeyessolution.com/json/agenda-esc-2016.json';
+    var urlAgenda = 'http://static.bigeyes.solutions/json/agenda.convergence.2017.json';
 
     $.getJSON(urlAgenda, function (data) {
         if (data.version <= agenda.version)

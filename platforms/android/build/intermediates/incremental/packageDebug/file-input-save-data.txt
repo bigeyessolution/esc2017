@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 03 14:37:31 BRT 2017
+#Wed May 03 19:04:15 BRT 2017
 210.set=ASSET
 14.set=ASSET
 180.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/debug/www/css/images/icons-svg/alert-black.svg

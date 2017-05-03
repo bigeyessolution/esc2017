@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 03 14:41:40 BRT 2017
+#Wed May 03 18:53:29 BRT 2017
 210.set=ASSET
 14.set=ASSET
 180.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release/www/css/images/icons-png/forbidden-black.png
@@ -126,7 +126,7 @@
 251.base=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release
 174.base=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release
 110.set=ASSET
-272.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/res/resources-release.ap_/res/mipmap-xxxhdpi-v4/icon.png
+272.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/res/resources-release.ap_/res/drawable-port-xxhdpi-v4/screen.png
 216.set=ASSET
 1.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release/www/img/icon/agenda.png
 262.set=ASSET
@@ -322,7 +322,7 @@
 165.base=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release
 126.set=ASSET
 140.base=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release
-273.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/res/resources-release.ap_/res/drawable-port-xxhdpi-v4/screen.png
+273.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/res/resources-release.ap_/res/mipmap-xxxhdpi-v4/icon.png
 196.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/res/resources-release.ap_/res/drawable-port-xxxhdpi-v4/screen.png
 171.file=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/assets/release/www/css/images/icons-png/carat-d-white.png
 278.set=ASSET

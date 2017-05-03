@@ -1,4 +1,4 @@
-#Wed May 03 14:37:31 BRT 2017
+#Wed May 03 19:04:15 BRT 2017
 base.0=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
