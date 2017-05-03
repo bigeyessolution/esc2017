@@ -1,17 +1,24 @@
-# Built application files
-*.apk
-*.ap_
 
+# Created by https://www.gitignore.io/api/netbeans,apachecordova
+
+### ApacheCordova ###
+# Apache Cordova generated files and directories
+bin/*
+!/plugins
+!/plugins/android.json
+!/plugins/fetch.json
+plugins/*
+platforms/*
+
+### NetBeans ###
+nbproject
 build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
-# Log Files
-*.log
-
-platforms
-
-plugins
-
-hooks
+# End of https://www.gitignore.io/api/netbeans,apachecordova
 
 .DS_Store
 */.DS_store
