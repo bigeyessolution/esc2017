@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/release/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f75f04514306af151d3a8960cf20873d565e3982">
+        <dex dex="/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/pre-dexed/release/CordovaLib-unspecified-release_1217258a380f47f6941f724261d5bb3ae165b543.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="434011db823b4b0c92fceb7f24fed9e632894ed4">
+        <dex dex="/home/vanlivre/Projetos/esc2017/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_e0cc55cce72bdb9ac26737802cf454f336d9dc81.jar" />
+    </item>
+
+</items>
