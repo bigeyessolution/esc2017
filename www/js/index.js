@@ -15,6 +15,7 @@
   * along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
   */
 
+toKeynote = false;
 
 $( document ).on( "mobileinit", function() {
 	$.mobile.loader.prototype.options.text = "loading";
@@ -42,8 +43,15 @@ $( document ).on( "pagecontainerchange", function(event, ui) {
 		populateAgenda(toPage);
 
 		getAgenda (toPage);
-	}
-
+	} else if (toPage == "palestrantes" && toKeynote) {
+            kpos = $('#'+toKeynote).position().top;
+            
+            console.log(toKeynote + ' pos: ' + kpos);
+            
+            $('html, body, .ui-page').animate({ scrollTop: kpos });           
+        }
+        
+        toKeynote = false;
 });
 
 $(function() {

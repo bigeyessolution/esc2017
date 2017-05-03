@@ -23,9 +23,9 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
 			"salahora": "10:00",
 			"itens": [
 				{"salahora": "Versailles - 10:00", "titulo": "Opening", "info": "Clovis Maliska Jr., ESSS"},
-				{"salahora": "Versailles - 10:10", "titulo": "Simulation-Based Digital Twins and the Industrial Internet of Things", "info": "Sameer Kher, ANSYS"},
-				{"salahora": "Versailles - 10:40", "titulo": "The use of Numerical Simulation in ARCELORMITTAL Group", "info": "Rafael Sartim, ArcelorMittal"},
-				{"salahora": "Versailles - 11:10", "titulo": "Putting the Industrial Internet into practice", "info": "J. Rizzo Hahn Filho, ABII"},
+				{"salahora": "Versailles - 10:10", "titulo": "Simulation-Based Digital Twins and the Industrial Internet of Things", "info": "Sameer Kher, ANSYS", "keynote": "sameer"},
+				{"salahora": "Versailles - 10:40", "titulo": "The use of Numerical Simulation in ARCELORMITTAL Group", "info": "Rafael Sartim, ArcelorMittal", "keynote": "sartim"},
+				{"salahora": "Versailles - 11:10", "titulo": "Putting the Industrial Internet into practice", "info": "J. Rizzo Hahn Filho, ABII", "keynote": "rizzo-rahn"},
 				{"salahora": "Versailles - 11:40", "titulo": "Plenary Session 4", "info": ""}
 			]
 		},
@@ -190,8 +190,9 @@ function populateAgenda(toPage) {
 	var linhaID = 0;
 
 	function populateSub (key, sub) {
-		$('<li data-icon="false"><a '+
-		( sub.link ? 'href="' + sub.link + '"' : '' ) +
+		$('<li data-icon="false"><a'+
+		( sub.link ? ' href="' + sub.link + '"' : '' ) +
+                ( sub.keynote ? " onclick=\"toKeynoteID('keynote-" + sub.keynote + "')\"" : '') +
 		'><h2>' + sub.titulo + '</h2>' +
 		'<p>' + sub.info + '</p>' +
 		'<span>' + sub.salahora + '</span>' +
@@ -242,4 +243,10 @@ function getAgenda (toPage) {
 		agenda = data;
 		localStorage.agenda = JSON.stringify(data);
 	});
+}
+
+function toKeynoteID (keynoteid) {
+    toKeynote = keynoteid;
+    
+    $(":mobile-pagecontainer").pagecontainer("change", "#palestrantes");
 }
