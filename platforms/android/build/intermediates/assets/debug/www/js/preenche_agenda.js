@@ -1,6 +1,36 @@
 var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
         {
-            "version": 25,
+            "version": 0,
+            "palestrantes": [
+                {
+                    "id": "sameer",
+                    "nome": "Sameer Kher",
+                    "organizacao": "ANSYS",
+                    "especialidade": "Simulation-Based Digital Twins and the Industrial Internet of Things",
+                    "descricao": "- Proven and top performing technology leader with 10+ years in R&#38;D management and program management in a fast-paced, global environment.<br>- Strong technical strength and business savvy, augmented by MS and MBA from top ranked schools.<br>- Experienced in developing and leading multi-functional teams.<br>- Broad experience in industry, ranging from developing game-changing innovations to identifying and executing M&#38;As."
+                }
+                ,{
+                    "id": "rafael",
+                    "nome": "Rafael Sartim",
+                    "organizacao": "ArcelorMittal Brasil-América do Sul",
+                    "especialidade": "The use of Numerical Simulation in ARCELORMITTAL Group",
+                    "descricao": "Atualmente é engenheiro mecânico na ArcelorMittal Tubarão, com atuação na área de projetos de Ventilação Industrial, Tubulação Industrial e cálculos termofluidos através da ferramenta de Mecânica dos Fluidos e Tranferencia de Calor Computacional (CFD). É professor efetivo do Departamento de Tecnologia Industrial da Universidade Federal do Espírito Santo (UFES)."
+                }
+                ,{
+                    "id": "rizzo",
+                    "nome": "J. Rizzo Hahn Filho",
+                    "organizacao": "ABII",
+                    "especialidade": "Putting the Industrial Internet into practice",
+                    "descricao": "Graduated in Mechanical Engineering, José Rizzo Hahn Filho is founder and CEO of Pollux , a technology company dedicated to increasing the competitiveness of industry. Over the past 25 years, Rizzo has been heatrfully involved with industrial automation advancements in the world and its impacts in business and society. A frequent guest speaker in international events and conferences, Rizzo is also founder of the Industrial Internet Brazilian Association (ABII) and an Endeavor selected entrepreneur. Pollux has been recognized as one of the most innovative tech companies in the country by FINEP and appears in the list of the best 100 technology companies to work for in Brazil according to the Great Place to Work Institute."
+                }
+                ,{
+                    "id": "marcelo",
+                    "nome": "Marcelo Sáfadi Alvares",
+                    "organizacao": "Parque Teconológico de São José dos Campos-SP",
+                    "especialidade": "-------------------------------",
+                    "descricao": "Specialties: MBA - Fundação Getúlio Vargas - SP / Gestão Estratégica e Econômica de NegóciosMBA - Módulo Internacional / ISCTE - Lisboa/PT - Gestão Estratégica e Econômica de NegóciosFundação Dom Cabral - Belo Horizonte - Programa Exceutivos"
+                }
+            ],
             "agenda10": [
                 {"salahora": "8:00", "titulo": "Credenciamento", "info": "", "divisao": true},
                 {
@@ -24,8 +54,8 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
                     "itens": [
                         {"salahora": "Versailles - 10:00", "titulo": "Opening", "info": "Clovis Maliska Jr., ESSS"},
                         {"salahora": "Versailles - 10:10", "titulo": "Simulation-Based Digital Twins and the Industrial Internet of Things", "info": "Sameer Kher, ANSYS", "keynote": "sameer"},
-                        {"salahora": "Versailles - 10:40", "titulo": "The use of Numerical Simulation in ARCELORMITTAL Group", "info": "Rafael Sartim, ArcelorMittal", "keynote": "sartim"},
-                        {"salahora": "Versailles - 11:10", "titulo": "Putting the Industrial Internet into practice", "info": "J. Rizzo Hahn Filho, ABII", "keynote": "rizzo-rahn"},
+                        {"salahora": "Versailles - 10:40", "titulo": "The use of Numerical Simulation in ARCELORMITTAL Group", "info": "Rafael Sartim, ArcelorMittal", "keynote": "rafael"},
+                        {"salahora": "Versailles - 11:10", "titulo": "Putting the Industrial Internet into practice", "info": "J. Rizzo Hahn Filho, ABII", "keynote": "rizzo"},
                         {"salahora": "Versailles - 11:40", "titulo": "Plenary Session 4", "info": ""}
                     ]
                 },
@@ -179,6 +209,32 @@ function setAgenda() {
     }
 }
 
+function showOneKeynote (keynoteId) {
+    function _showOneKeynote (key, keynote) {
+        if (keynote.id === keynoteId) {
+            populateKeynote(0, keynote);
+            return true;
+        }
+    }
+    
+    $.each(agenda.palestrantes, _showOneKeynote);
+}
+
+function populateKeynotes() {
+    $.each(agenda.palestrantes, populateKeynote);
+}
+
+function populateKeynote(key,keynoteObj) {
+    
+    $('<div class="ui-body">' +
+        '<img src="img/palestrantes/k_' + keynoteObj.id + '.png">' +
+        '<h2>' + keynoteObj.nome + '</h2>' +
+        '<h4>' + keynoteObj.organizacao + '</h4>' +
+        '<h5><i>' + keynoteObj.especialidade + '</i></h5>' +
+        '<p>' + keynoteObj.descricao + '</p></div>'
+    ).appendTo('#conteudo-palestrantes');
+}
+
 function populateAgenda(toPage) {
     $('#' + toPage + ' .ui-be-agenda').empty();
     $('#' + toPage + ' .ui-be-agenda').listview("refresh");
@@ -192,7 +248,7 @@ function populateAgenda(toPage) {
     function populateSub(key, sub) {
         $('<li data-icon="false"><a' +
                 (sub.link ? ' href="' + sub.link + '"' : '') +
-                (sub.keynote ? " onclick=\"toKeynoteID('keynote-" + sub.keynote + "')\"" : '') +
+                (sub.keynote ? " onclick=\"toKeynoteID('" + sub.keynote + "')\"" : '') +
                 '><h2>' + sub.titulo + '</h2>' +
                 '<p>' + sub.info + '</p>' +
                 '<span>' + sub.salahora + '</span>' +

@@ -25,6 +25,13 @@ $(document).on("mobileinit", function () {
 });
 
 $(document).on("pagecontainerbeforechange", function (event, ui) {
+    //var toPage = $(ui.toPage).attr('id');
+    var prevPage = $(ui.prevPage).attr('id');
+    
+    if (prevPage === 'palestrantes') {	
+        $('#conteudo-palestrantes').empty();
+    }
+
     $("[data-role='navbar'] a.ui-btn-active").removeClass("ui-btn-active");
 });
 
@@ -32,8 +39,6 @@ $(document).on("pagecontainerchange", function (event, ui) {
     var toPage = $(ui.toPage).attr('id');
     var prevPage = $(ui.prevPage).attr('id');
     
-    $('.ui-page').animate({scrollTop: 0});
-
     if (toPage === 'mapa')
         criarMapa();
     if (prevPage === 'mapa')
@@ -43,21 +48,24 @@ $(document).on("pagecontainerchange", function (event, ui) {
 
     $('a[href="#' + toPage + '"]').addClass("ui-btn-active");
 
-    if (toPage == "agenda10") {
+    if (toPage === "agenda10") {
         populateAgenda(toPage);
 
         getAgenda(toPage);
-    } else if (toPage == "palestrantes" && toKeynote) {
-        kpos = $('#' + toKeynote).position().top;
-
-        console.log(toKeynote + ' pos: ' + kpos);
-
-        $('.ui-page').animate({scrollTop: kpos});
-    } else if (toPage == "palestrantes") {
+    } else if (toPage === "palestrantes") {
+        $('#conteudo-palestrantes').empty();
         
+        showLoading();
+        
+        if (toKeynote) {
+            showOneKeynote(toKeynote);
+            toKeynote = false;
+        } else {
+            populateKeynotes();
+        }
+        
+        hideLoading();
     }
-
-    toKeynote = false;
 });
 
 $(function () {
