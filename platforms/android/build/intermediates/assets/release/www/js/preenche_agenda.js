@@ -45,7 +45,7 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
                         {"salahora": "Chambord - 8:30", "titulo": "Topology Optimization & Additive Manufacturing", "info": "Luiz Lima - ESSS"}
                     ]
                 },
-                {"salahora": "10:10", "titulo": "Coffee-Break", "info": "", "divisao": true},
+                {"salahora": "09:30", "titulo": "Coffee-Break", "info": "", "divisao": true},
                 {
                     "collapsible": true,
                     "class": "ui-be-plenary-session",
@@ -59,7 +59,7 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
                         {"salahora": "Versailles - 11:40", "titulo": "Plenary Session 4", "info": ""}
                     ]
                 },
-                {"salahora": "13:30 - 14:30", "titulo": "Sessões Práticas", "info": "", "divisao": true},
+                {"salahora": "12:10", "titulo": "Lunch", "info": "", "divisao": true},
                 {
                     "collapsible": true,
                     "class": "ui-be-pratic-session",
@@ -104,7 +104,6 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
                         {"salahora": "14:10", "titulo": "Multiphysics AIM", "info": ""}
                     ]
                 },
-                {"salahora": "14:30 - 17:40", "titulo": "Trabalhos Técnicos", "info": "", "divisao": true},
                 {
                     "collapsible": true,
                     "class": "ui-be-technical-session",
