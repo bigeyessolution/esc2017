@@ -27,7 +27,7 @@ var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
                     "id": "marcelo",
                     "nome": "Marcelo Sáfadi Alvares",
                     "organizacao": "Parque Teconológico de São José dos Campos-SP",
-                    "especialidade": "-------------------------------",
+                    "especialidade": "",
                     "descricao": "Specialties: MBA - Fundação Getúlio Vargas - SP / Gestão Estratégica e Econômica de NegóciosMBA - Módulo Internacional / ISCTE - Lisboa/PT - Gestão Estratégica e Econômica de NegóciosFundação Dom Cabral - Belo Horizonte - Programa Exceutivos"
                 }
             ],

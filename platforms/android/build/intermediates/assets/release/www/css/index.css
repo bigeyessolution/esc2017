@@ -20,9 +20,9 @@
 }
 
 @font-face {
-	font-family: 'Conv_ubuntu';
-	src: url('fonts/ubuntu.eot');
-	src: local('☺'), url('fonts/ubuntu.woff') format('woff'), url('fonts/ubuntu.ttf') format('truetype'), url('fonts/ubuntu.svg') format('svg');
+	font-family: 'San_Francisco';
+	src: url('fonts/SanFrancisco.eot');
+	src: local('☺'), url('fonts/SanFrancisco.woff') format('woff'), url('fonts/SanFrancisco.ttf') format('truetype'), url('fonts/SanFrancisco.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -30,7 +30,7 @@
 html, body, section, .ui-page, #mapa .ui-content, #mapaLocal { padding: 0!important; margin: 0 !important; height: 100%; font-family: 'Open Sans', sans-serif;}
 
 h1, h2, h3, h4, h5, h6, h7, a, p, span{
-	font-family: 'Conv_ubuntu',Sans-Serif !important;
+	font-family: 'San_Francisco',Sans-Serif !important;
 }
 
 .header-agenda{
