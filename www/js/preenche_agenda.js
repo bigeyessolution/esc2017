@@ -1,6 +1,6 @@
 var agenda = false && localStorage.agenda ? JSON.parse(localStorage.agenda) :
 {
-    "version": 10,
+    "version": 11,
     "palestrantes": [
                      {
                      "id": "sameer",
